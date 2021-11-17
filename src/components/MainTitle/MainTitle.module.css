@@ -1,0 +1,45 @@
+.title {
+    position: relative;
+
+    display: inline;
+    margin-bottom: 55px;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 70px;
+    color: rgb(244, 74, 30);
+
+    text-transform: uppercase;
+}
+
+.title::before, .title::after {
+    content: '';
+    position: absolute;
+    top: 30px;
+
+    width:156px;
+    height: 4px;
+
+    background-color:rgb(244, 74, 30);
+}
+
+.title::before {
+    left: -186px;
+}
+
+.title::after {
+    right: -186px;
+}
+
+@media (max-width: 665px) {
+    .title::before, .title::after {
+        width: 0;
+        height: 0;
+    }
+
+    .title {
+        font-size: 40px;
+        line-height: 48px;
+    }
+}
